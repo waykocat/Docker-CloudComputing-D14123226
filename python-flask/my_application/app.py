@@ -33,7 +33,7 @@ def euler1():
     sum = 0;
     for x in range(1000):
         if (x%3 == 0 or x%5 == 0): sum += x;
-    newSum = str(sum)
+    newSum = str(sum) + "\n"
     return newSum
 
 @app.route('/Euler2')
@@ -50,5 +50,5 @@ def euler2():
         if (b%2 == 0):
             sum_fib+=b
 
-    newSumFib = str(sum_fib)
+    newSumFib = str(sum_fib) + "\n" 
     return newSumFib
