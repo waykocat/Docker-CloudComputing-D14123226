@@ -26,3 +26,29 @@ def list_files():
     for i in onlyfiles:
         listToReturn = listToReturn + i + "\n"
     return listToReturn
+
+@app.route('/Euler1')
+def euler1():
+    x = 1;
+    sum = 0;
+    for x in range(1000):
+        if (x%3 == 0 or x%5 == 0): sum += x;
+    newSum = str(sum)
+    return newSum
+
+@app.route('/Euler2')
+def euler2():
+    a = 0;  #inicialization of varibales
+    b = 1;
+
+    sum_fib = 0
+
+    while True:
+        a, b = b, a+b
+        if b >= 4000000:
+            break
+        if (b%2 == 0):
+            sum_fib+=b
+
+    newSumFib = str(sum_fib)
+    return newSumFib
